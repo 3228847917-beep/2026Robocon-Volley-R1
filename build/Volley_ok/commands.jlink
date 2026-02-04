@@ -1,0 +1,6 @@
+r
+halt
+loadfile "e:\My_enginerring\Hit-ball\MDK-ARM\build\Volley_ok\Volley_ok.hex"
+r
+go
+exit

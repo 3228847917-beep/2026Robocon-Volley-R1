@@ -1,0 +1,1304 @@
+[2026-01-25 09:06:14]	[info] incremental build: 44 source files changed
+These source files will be recompiled
+---
+'e:\New Folder\Volley_ok\Core\Src\can.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Core\Src\dma.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Core\Src\freertos.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Core\Src\gpio.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Core\Src\main.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Core\Src\stm32f4xx_hal_msp.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Core\Src\stm32f4xx_hal_timebase_tim.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Core\Src\stm32f4xx_it.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Core\Src\system_stm32f4xx.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Core\Src\usart.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_can.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Middlewares\Third_Party\FreeRTOS\Source\croutine.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Middlewares\Third_Party\FreeRTOS\Source\list.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\port.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Middlewares\Third_Party\FreeRTOS\Source\queue.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Middlewares\Third_Party\FreeRTOS\Source\tasks.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\Middlewares\Third_Party\FreeRTOS\Source\timers.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\MDK-ARM\CANDrive.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\MDK-ARM\Chassis.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\MDK-ARM\PID_old.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\MDK-ARM\Task_Init.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\MDK-ARM\VESC.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\MDK-ARM\bsp_dwt.c': object (.o) file not exist
+'e:\New Folder\Volley_ok\MDK-ARM\startup_stm32f407xx.s': object (.o) file not exist
+
+[2026-01-25 09:06:15]	[done]
+	build successfully !
+
+[2026-01-25 09:06:20]	[done]
+	build successfully !
+
+[2026-01-25 09:16:57]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\New Folder\Volley_ok\MDK-ARM\Chassis.c': source file has been changed.
+
+[2026-01-25 09:16:58]	[done]
+	build successfully !
+
+[2026-01-25 09:20:28]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\New Folder\Volley_ok\MDK-ARM\Chassis.c': source file has been changed.
+
+[2026-01-25 09:20:28]	[done]
+	build successfully !
+
+[2026-01-25 09:23:32]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\New Folder\Volley_ok\MDK-ARM\Chassis.c': source file has been changed.
+
+[2026-01-25 09:23:33]	[done]
+	build successfully !
+
+[2026-01-25 09:30:40]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\New Folder\Volley_ok\MDK-ARM\Chassis.c': source file has been changed.
+
+[2026-01-25 09:30:40]	compilation failed at : "e:\New Folder\Volley_ok\MDK-ARM\Chassis.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\Chassis.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\Chassis.d .\Chassis.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Chassis.c", line 118: Error:  #29: expected an expression
+  /			vel_toq1.torque = steering1.Steering_PID.pid_out;
+  ^
+.\Chassis.c: 0 warnings, 1 error
+
+[2026-01-25 09:30:59]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\New Folder\Volley_ok\MDK-ARM\Chassis.c': source file has been changed.
+
+[2026-01-25 09:31:00]	[done]
+	build successfully !
+
+[2026-01-25 09:34:21]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\New Folder\Volley_ok\MDK-ARM\Chassis.c': source file has been changed.
+
+[2026-01-25 09:34:21]	[done]
+	build successfully !
+
+[2026-01-25 09:41:29]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\New Folder\Volley_ok\MDK-ARM\Chassis.c': source file has been changed.
+
+[2026-01-25 09:41:30]	[done]
+	build successfully !
+
+[2026-01-25 09:45:00]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\New Folder\Volley_ok\MDK-ARM\Chassis.c': source file has been changed.
+
+[2026-01-25 09:45:00]	[done]
+	build successfully !
+
+[2026-01-25 09:53:24]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\New Folder\Volley_ok\MDK-ARM\Task_Init.c': source file has been changed.
+
+[2026-01-25 09:53:24]	[done]
+	build successfully !
+
+[2026-01-28 15:43:49]	[info] incremental build: 44 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\new_Volley_ok_2_hard\Core\Src\can.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Core\Src\dma.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Core\Src\freertos.c': source file has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Core\Src\gpio.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Core\Src\main.c': source file has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Core\Src\stm32f4xx_hal_msp.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Core\Src\stm32f4xx_hal_timebase_tim.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Core\Src\stm32f4xx_it.c': source file has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Core\Src\system_stm32f4xx.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Core\Src\usart.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_can.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Middlewares\Third_Party\FreeRTOS\Source\croutine.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Middlewares\Third_Party\FreeRTOS\Source\list.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\port.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Middlewares\Third_Party\FreeRTOS\Source\queue.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Middlewares\Third_Party\FreeRTOS\Source\tasks.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\Middlewares\Third_Party\FreeRTOS\Source\timers.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\MDK-ARM\CANDrive.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\MDK-ARM\Chassis.c': source file has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\MDK-ARM\PID_old.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\MDK-ARM\Task_Init.c': source file has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\MDK-ARM\VESC.c': source file has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\MDK-ARM\bsp_dwt.c': compiler options has been changed.
+'e:\My_enginerring\new_Volley_ok_2_hard\MDK-ARM\startup_stm32f407xx.s': compiler options has been changed.
+
+[2026-01-28 15:43:50]	[done]
+	build successfully !
+
+[2026-01-28 15:49:23]	[done]
+	build successfully !
+
+[2026-01-28 15:50:34]	[done]
+	build successfully !
+
+[2026-01-30 20:23:30]	[info] incremental build: 46 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\Core\Src\can.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Core\Src\dma.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Core\Src\freertos.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Core\Src\gpio.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Core\Src\main.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Core\Src\stm32f4xx_hal_msp.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Core\Src\stm32f4xx_hal_timebase_tim.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Core\Src\stm32f4xx_it.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Core\Src\system_stm32f4xx.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Core\Src\usart.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_can.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Middlewares\Third_Party\FreeRTOS\Source\croutine.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Middlewares\Third_Party\FreeRTOS\Source\list.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\port.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Middlewares\Third_Party\FreeRTOS\Source\queue.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Middlewares\Third_Party\FreeRTOS\Source\tasks.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\Middlewares\Third_Party\FreeRTOS\Source\timers.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\CANDrive.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\Chassis.c': source file has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\PID_old.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\RobStride.c': object (.o) file not exist
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': source file has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\VESC.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\bsp_dwt.c': compiler options has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': object (.o) file not exist
+'e:\My_enginerring\Hit-ball\MDK-ARM\startup_stm32f407xx.s': compiler options has been changed.
+
+[2026-01-30 20:23:31]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\Task_Init.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\Task_Init.d .\Task_Init.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Task_Init.c", line 36: Error:  #20: identifier "Volleyball_Serve" is undefined
+  	xTaskCreate(Volleyball_Serve,
+  	            ^
+".\Task_Init.c", line 41: Error:  #20: identifier "Volleyball_Serve_Handle" is undefined
+            &Volleyball_Serve_Handle);
+             ^
+.\Task_Init.c: 0 warnings, 2 errors
+
+[2026-01-30 20:37:14]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': source file has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:37:14]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\Task_Init.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\Task_Init.d .\Task_Init.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Task_Init.c", line 36: Error:  #20: identifier "Volleyball_Serve" is undefined
+  	xTaskCreate(Volleyball_Serve,
+  	            ^
+".\Task_Init.c", line 41: Error:  #20: identifier "Volleyball_Serve_Handle" is undefined
+            &Volleyball_Serve_Handle);
+             ^
+.\Task_Init.c: 0 warnings, 2 errors
+
+[2026-01-30 20:37:47]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': source file has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:37:47]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\Task_Init.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\Task_Init.d .\Task_Init.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Task_Init.c", line 42: Error:  #20: identifier "Volleyball_Serve_Handle" is undefined
+            &Volleyball_Serve_Handle);
+             ^
+.\Task_Init.c: 0 warnings, 1 error
+
+[2026-01-30 20:39:56]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': source file has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:39:56]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\Task_Init.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\Task_Init.d .\Task_Init.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Task_Init.c", line 42: Error:  #20: identifier "Volleyball_Serve_Handle" is undefined
+            &Volleyball_Serve_Handle);
+             ^
+.\Task_Init.c: 0 warnings, 1 error
+
+[2026-01-30 20:41:12]	[info] incremental build: 5 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\Core\Src\freertos.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\Chassis.h' has been changed.
+'e:\My_enginerring\Hit-ball\Core\Src\stm32f4xx_it.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\Chassis.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\Chassis.c': source file has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': source file has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:41:13]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\Task_Init.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\Task_Init.d .\Task_Init.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Task_Init.c", line 42: Error:  #20: identifier "Volleyball_Serve_Handle" is undefined
+            &Volleyball_Serve_Handle);
+             ^
+.\Task_Init.c: 0 warnings, 1 error
+
+[2026-01-30 20:41:32]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': source file has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:41:33]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 9: Error:  #136: struct "<unnamed>"  has no field "RobStrideType"
+      .RobStrideType = RobStride_04
+       ^
+".\hitball.c", line 11: Error:  #65: expected a ";"
+  RobStride_t R_down={
+  ^
+".\hitball.c", line 15: Warning:  #12-D: parsing restarts here after previous syntax error
+  };
+   ^
+.\hitball.c: 1 warning, 2 errors
+
+[2026-01-30 20:41:49]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:41:49]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 9: Error:  #136: struct "<unnamed>"  has no field "RobStrideType"
+      .RobStrideType = RobStride_04
+       ^
+".\hitball.c", line 14: Error:  #254: type name is not allowed
+      RobStrideType = RobStride_04
+      ^
+".\hitball.c", line 14: Error:  #57: this operator is not allowed in a constant expression
+      RobStrideType = RobStride_04
+                    ^
+.\hitball.c: 0 warnings, 3 errors
+
+[2026-01-30 20:42:00]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:42:00]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 9: Error:  #136: struct "<unnamed>"  has no field "RobStrideType"
+      .RobStrideType = RobStride_04
+       ^
+".\hitball.c", line 14: Error:  #136: struct "<unnamed>"  has no field "RobStrideType"
+      .RobStrideType = RobStride_04
+       ^
+.\hitball.c: 0 warnings, 2 errors
+
+[2026-01-30 20:42:28]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:42:29]	[done]
+	build successfully !
+
+[2026-01-30 20:43:21]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:43:21]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 21: Error:  #154: expression must have struct or union type
+      .expect_kp=0.0f
+                 ^
+".\hitball.c", line 22: Error:  #57: this operator is not allowed in a constant expression
+      .expect_kd=0.0f
+                ^
+".\hitball.c", line 28: Error:  #154: expression must have struct or union type
+      .expect_kp=0.0f
+                 ^
+".\hitball.c", line 29: Error:  #57: this operator is not allowed in a constant expression
+      .expect_kd=0.0f
+                ^
+.\hitball.c: 0 warnings, 4 errors
+
+[2026-01-30 20:44:12]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:44:13]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 21: Error:  #154: expression must have struct or union type
+      .expect_kp=0.0f
+                 ^
+".\hitball.c", line 22: Error:  #57: this operator is not allowed in a constant expression
+      .expect_kd=0.0f
+                ^
+.\hitball.c: 0 warnings, 2 errors
+
+[2026-01-30 20:44:20]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:44:21]	[done]
+	build successfully !
+
+[2026-01-30 20:45:36]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:45:36]	[done]
+	build successfully !
+
+[2026-01-30 20:47:16]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:47:16]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 52: Error:  #20: identifier "Rs_Volleyball_Joint" is undefined
+  	RobStrideRecv_Handle(&Rs_Volleyball_Joint, &hcan1, ID, buf);
+  	                      ^
+.\hitball.c: 0 warnings, 1 error
+
+[2026-01-30 20:47:31]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:47:31]	[done]
+	build successfully !
+
+[2026-01-30 20:50:25]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:50:26]	[done]
+	build successfully !
+
+[2026-01-30 20:52:53]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:52:54]	[done]
+	build successfully !
+
+[2026-01-30 20:54:28]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:54:29]	[done]
+	build successfully !
+
+[2026-01-30 20:56:15]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:56:16]	[done]
+	build successfully !
+
+[2026-01-30 20:58:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:58:23]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 58: Error:  #20: identifier "Rs_Volleyball_Joint" is undefined
+          if(Rs_Volleyball_Joint.state.rad < -3.5f)
+             ^
+.\hitball.c: 0 warnings, 1 error
+
+[2026-01-30 20:59:12]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:59:12]	[done]
+	build successfully !
+
+[2026-01-30 20:59:43]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-30 20:59:44]	[done]
+	build successfully !
+
+[2026-01-31 08:42:57]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:42:57]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 9: Error:  #20: identifier "R_up_pos_pid" is undefined
+  R_up_pos_pid R_up_pos_PID;
+  ^
+.\hitball.c: 0 warnings, 1 error
+
+[2026-01-31 08:43:30]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:43:31]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 9: Error:  #40: expected an identifier
+  up_PID.R_up_pos_pid R_up_pos_PID;
+        ^
+.\hitball.c: 0 warnings, 1 error
+
+[2026-01-31 08:46:27]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:46:28]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 9: Error:  #20: identifier "R_up_pos_pid" is undefined
+  R_up_pos_pid R_up_pos_PID;
+  ^
+.\hitball.c: 0 warnings, 1 error
+
+[2026-01-31 08:46:40]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:46:41]	[done]
+	build successfully !
+
+[2026-01-31 08:48:28]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:48:28]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 12: Error:  #77-D: this declaration has no storage class or type specifier
+  R_up_pid{
+  ^
+".\hitball.c", line 12: Error:  #147: declaration is incompatible with "up_PID R_up_pid"  (declared at line 9)
+  R_up_pid{
+  ^
+".\hitball.c", line 12: Error:  #65: expected a ";"
+  R_up_pid{
+          ^
+".\hitball.c", line 29: Warning:  #12-D: parsing restarts here after previous syntax error
+  TaskHandle_t Volleyball_Serve_Handle;
+                                      ^
+.\hitball.c: 1 warning, 3 errors
+
+[2026-01-31 08:48:42]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:48:42]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 12: Error:  #77-D: this declaration has no storage class or type specifier
+  R_up_pid{
+  ^
+".\hitball.c", line 12: Error:  #147: declaration is incompatible with "up_PID R_up_pid"  (declared at line 9)
+  R_up_pid{
+  ^
+".\hitball.c", line 12: Error:  #65: expected a ";"
+  R_up_pid{
+          ^
+".\hitball.c", line 27: Warning:  #12-D: parsing restarts here after previous syntax error
+  };
+   ^
+.\hitball.c: 1 warning, 3 errors
+
+[2026-01-31 08:49:21]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:49:21]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 12: Error:  #77-D: this declaration has no storage class or type specifier
+  R_up_pid{
+  ^
+".\hitball.c", line 12: Error:  #147: declaration is incompatible with "up_PID R_up_pid"  (declared at line 9)
+  R_up_pid{
+  ^
+".\hitball.c", line 12: Error:  #65: expected a ";"
+  R_up_pid{
+          ^
+".\hitball.c", line 33: Warning:  #12-D: parsing restarts here after previous syntax error
+      RobStrideInit(&R_up, &hcan1, 0x01, RobStride_04);
+                                                      ^
+".\hitball.c", line 34: Error:  #79: expected a type specifier
+  	RobStrideSetMode(&R_up, RobStride_Torque);
+  	                 ^
+".\hitball.c", line 34: Error:  #757: constant "RobStride_Torque"  is not a type name
+  	RobStrideSetMode(&R_up, RobStride_Torque);
+  	                        ^
+".\hitball.c", line 34: Error:  #260-D: explicit type is missing ("int" assumed)
+  	RobStrideSetMode(&R_up, RobStride_Torque);
+  	^
+".\hitball.c", line 34: Error:  #147-D: declaration is incompatible with "uint32_t RobStrideSetMode(RobStride_t *, RobStrideMode)"  (declared at line 95 of ".\RobStride.h")
+  	RobStrideSetMode(&R_up, RobStride_Torque);
+  	^
+".\hitball.c", line 35: Error:  #79: expected a type specifier
+      RobStrideEnable(&R_up);
+                      ^
+".\hitball.c", line 35: Error:  #260-D: explicit type is missing ("int" assumed)
+      RobStrideEnable(&R_up);
+      ^
+".\hitball.c", line 35: Error:  #147-D: declaration is incompatible with "uint32_t RobStrideEnable(RobStride_t *)"  (declared at line 96 of ".\RobStride.h")
+      RobStrideEnable(&R_up);
+      ^
+".\hitball.c", line 36: Error:  #79: expected a type specifier
+      vTaskDelay(1);
+                 ^
+".\hitball.c", line 36: Error:  #260-D: explicit type is missing ("int" assumed)
+      vTaskDelay(1);
+      ^
+".\hitball.c", line 36: Error:  #147: declaration is incompatible with "void vTaskDelay(const TickType_t)"  (declared at line 758 of "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h")
+      vTaskDelay(1);
+      ^
+".\hitball.c", line 38: Error:  #79: expected a type specifier
+      RobStrideInit(&R_down, &hcan1, 0x02, RobStride_04);
+                    ^
+".\hitball.c", line 38: Error:  #79: expected a type specifier
+      RobStrideInit(&R_down, &hcan1, 0x02, RobStride_04);
+                             ^
+".\hitball.c", line 38: Error:  #79: expected a type specifier
+      RobStrideInit(&R_down, &hcan1, 0x02, RobStride_04);
+                                     ^
+".\hitball.c", line 38: Error:  #757: constant "RobStride_04"  is not a type name
+      RobStrideInit(&R_down, &hcan1, 0x02, RobStride_04);
+                                           ^
+".\hitball.c", line 38: Error:  #260-D: explicit type is missing ("int" assumed)
+      RobStrideInit(&R_down, &hcan1, 0x02, RobStride_04);
+      ^
+".\hitball.c", line 38: Error:  #147: declaration is incompatible with "void RobStrideInit(RobStride_t *, CAN_HandleTypeDef *, uint32_t, RobStrideType)"  (declared at line 94 of ".\RobStride.h")
+      RobStrideInit(&R_down, &hcan1, 0x02, RobStride_04);
+      ^
+".\hitball.c", line 39: Error:  #79: expected a type specifier
+  	RobStrideSetMode(&R_down, RobStride_Torque);
+  	                 ^
+".\hitball.c", line 39: Error:  #757: constant "RobStride_Torque"  is not a type name
+  	RobStrideSetMode(&R_down, RobStride_Torque);
+  	                          ^
+".\hitball.c", line 39: Error:  #260-D: explicit type is missing ("int" assumed)
+  	RobStrideSetMode(&R_down, RobStride_Torque);
+  	^
+".\hitball.c", line 40: Error:  #79: expected a type specifier
+  	RobStrideEnable(&R_down);
+  	                ^
+".\hitball.c", line 40: Error:  #260-D: explicit type is missing ("int" assumed)
+  	RobStrideEnable(&R_down);
+  	^
+".\hitball.c", line 42: Error:  #79: expected a type specifier
+      RobStrideResetAngle(&R_up);
+                          ^
+".\hitball.c", line 42: Error:  #260-D: explicit type is missing ("int" assumed)
+      RobStrideResetAngle(&R_up);
+      ^
+".\hitball.c", line 42: Error:  #147-D: declaration is incompatible with "uint32_t RobStrideResetAngle(RobStride_t *)"  (declared at line 98 of ".\RobStride.h")
+      RobStrideResetAngle(&R_up);
+      ^
+".\hitball.c", line 43: Error:  #79: expected a type specifier
+      RobStrideResetAngle(&R_down);
+                          ^
+".\hitball.c", line 43: Error:  #260-D: explicit type is missing ("int" assumed)
+      RobStrideResetAngle(&R_down);
+      ^
+".\hitball.c", line 44: Error:  #169: expected a declaration
+      for(;;)
+      ^
+.\hitball.c: 1 warning, 30 errors
+
+[2026-01-31 08:50:09]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:50:09]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 12: Error:  #77-D: this declaration has no storage class or type specifier
+  R_up_pid{
+  ^
+".\hitball.c", line 12: Error:  #147: declaration is incompatible with "up_PID R_up_pid"  (declared at line 9)
+  R_up_pid{
+  ^
+".\hitball.c", line 12: Error:  #65: expected a ";"
+  R_up_pid{
+          ^
+".\hitball.c", line 27: Warning:  #12-D: parsing restarts here after previous syntax error
+  };
+   ^
+.\hitball.c: 1 warning, 3 errors
+
+[2026-01-31 08:51:21]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:51:22]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol R_up_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_up_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 4 error messages.
+
+
+[2026-01-31 08:51:28]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol R_up_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_up_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 4 error messages.
+
+
+[2026-01-31 08:51:35]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol R_up_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_up_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 4 error messages.
+
+
+[2026-01-31 08:52:04]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol R_up_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_up_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 4 error messages.
+
+
+[2026-01-31 08:52:26]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+
+[2026-01-31 08:52:26]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol R_up_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_up_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 4 error messages.
+
+
+[2026-01-31 08:55:01]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:55:01]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6200E: Symbol R_up_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_up_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_pos_pid multiply defined (by hitball.o and Task_Init.o).
+Error: L6200E: Symbol R_down_speed_pid multiply defined (by hitball.o and Task_Init.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 4 error messages.
+
+
+[2026-01-31 08:55:59]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+
+[2026-01-31 08:55:59]	[done]
+	build successfully !
+
+[2026-01-31 08:56:08]	[done]
+	build successfully !
+
+[2026-01-31 08:56:54]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:56:54]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 9: Error:  #65: expected a ";"
+  R_up_PID R_UP_PID{
+                   ^
+".\hitball.c", line 25: Warning:  #12-D: parsing restarts here after previous syntax error
+  TaskHandle_t Volleyball_Serve_Handle;
+                                      ^
+.\hitball.c: 1 warning, 1 error
+
+[2026-01-31 08:57:09]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:57:09]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 9: Error:  #65: expected a ";"
+  R_up_PID R_UP_PID{
+                   ^
+".\hitball.c", line 22: Warning:  #12-D: parsing restarts here after previous syntax error
+  };
+   ^
+.\hitball.c: 1 warning, 1 error
+
+[2026-01-31 08:58:36]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:58:36]	[done]
+	build successfully !
+
+[2026-01-31 08:58:47]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:58:47]	[done]
+	build successfully !
+
+[2026-01-31 08:59:25]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:59:26]	[done]
+	build successfully !
+
+[2026-01-31 08:59:33]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:59:33]	[done]
+	build successfully !
+
+[2026-01-31 08:59:49]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 08:59:49]	[done]
+	build successfully !
+
+[2026-01-31 09:02:03]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:02:04]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 64: Error:  #20: identifier "R_up_expect" is undefined
+          PID_Control2(R_up.state.rad, R_up_expect.expect_angle, &R_UP_PID.pos_pid);
+                                       ^
+".\hitball.c", line 65: Error:  #254: type name is not allowed
+          PID_Control2(R_up.state.omega, R_up_PID.pos_pid, &R_UP_PID.speed_pid);
+                                         ^
+".\hitball.c", line 68: Error:  #20: identifier "R_down_expect" is undefined
+          PID_Control2(R_down.state.rad, R_down_expect.expect_angle, &R_DOWN_PID.pos_pid);
+                                         ^
+".\hitball.c", line 69: Error:  #167: argument of type "PID2" is incompatible with parameter of type "float"
+          PID_Control2(R_down.state.omega, R_DOWN_PID.pos_pid, &R_DOWN_PID.speed_pid);
+                                           ^
+.\hitball.c: 0 warnings, 4 errors
+
+[2026-01-31 09:03:00]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:03:00]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 68: Error:  #254: type name is not allowed
+          PID_Control2(R_up.state.omega, R_up_PID.pos_pid, &R_UP_PID.speed_pid);
+                                         ^
+".\hitball.c", line 72: Error:  #167: argument of type "PID2" is incompatible with parameter of type "float"
+          PID_Control2(R_down.state.omega, R_DOWN_PID.pos_pid, &R_DOWN_PID.speed_pid);
+                                           ^
+.\hitball.c: 0 warnings, 2 errors
+
+[2026-01-31 09:03:30]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:03:30]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 68: Error:  #167: argument of type "PID2" is incompatible with parameter of type "float"
+          PID_Control2(R_up.state.omega, R_UP_PID.pos_pid, &R_UP_PID.speed_pid);
+                                         ^
+".\hitball.c", line 72: Error:  #167: argument of type "PID2" is incompatible with parameter of type "float"
+          PID_Control2(R_down.state.omega, R_DOWN_PID.pos_pid, &R_DOWN_PID.speed_pid);
+                                           ^
+.\hitball.c: 0 warnings, 2 errors
+
+[2026-01-31 09:04:55]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:04:56]	[done]
+	build successfully !
+
+[2026-01-31 09:05:04]	[done]
+	build successfully !
+
+[2026-01-31 09:07:04]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:07:04]	[done]
+	build successfully !
+
+[2026-01-31 09:21:08]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:21:10]	[done]
+	build successfully !
+
+[2026-01-31 09:26:00]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:26:00]	[done]
+	build successfully !
+
+[2026-01-31 09:27:31]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:27:32]	[done]
+	build successfully !
+
+[2026-01-31 09:27:47]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:27:48]	[done]
+	build successfully !
+
+[2026-01-31 09:32:25]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:32:25]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 106: Error:  #65: expected a ";"
+  {
+  ^
+".\hitball.c", line 112: Warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+".\hitball.c", line 112: Error: At end of source:  #67: expected a "}"
+".\hitball.c", line 112: Error: At end of source:  #67: expected a "}"
+.\hitball.c: 1 warning, 3 errors
+
+[2026-01-31 09:32:35]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:32:35]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 106: Error:  #65: expected a ";"
+  {
+  ^
+".\hitball.c", line 112: Error:  #7: unrecognized token
+  }ï¼?
+    ^
+".\hitball.c", line 112: Warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+".\hitball.c", line 112: Error: At end of source:  #67: expected a "}"
+".\hitball.c", line 112: Error: At end of source:  #67: expected a "}"
+.\hitball.c: 1 warning, 4 errors
+
+[2026-01-31 09:32:44]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:32:44]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 106: Error:  #65: expected a ";"
+  {
+  ^
+".\hitball.c", line 112: Warning:  #12-D: parsing restarts here after previous syntax error
+  };
+   ^
+".\hitball.c", line 112: Error: At end of source:  #67: expected a "}"
+".\hitball.c", line 112: Error: At end of source:  #67: expected a "}"
+.\hitball.c: 1 warning, 3 errors
+
+[2026-01-31 09:33:11]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:33:11]	[done]
+	build successfully !
+
+[2026-01-31 09:38:02]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:38:02]	[done]
+	build successfully !
+
+[2026-01-31 09:40:05]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 09:40:06]	[done]
+	build successfully !
+
+[2026-01-31 09:43:14]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+
+[2026-01-31 09:43:15]	[done]
+	build successfully !
+
+[2026-01-31 10:27:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 10:27:25]	[done]
+	build successfully !
+
+[2026-01-31 14:41:08]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 14:41:09]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 105: Error:  #20: identifier "Remote_Data" is undefined
+          Updatekey(&Remote_Data);
+                     ^
+.\hitball.c: 0 warnings, 1 error
+
+[2026-01-31 14:43:48]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 14:43:49]	[done]
+	build successfully !
+
+[2026-01-31 14:46:45]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 14:46:46]	[done]
+	build successfully !
+
+[2026-01-31 15:23:17]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 15:23:17]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 12: Error:  #20: identifier "ExpControl" is undefined
+  ExpControl Exp_control;
+  ^
+.\hitball.c: 0 warnings, 1 error
+
+[2026-01-31 15:23:33]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 15:23:34]	[done]
+	build successfully !
+
+[2026-01-31 15:33:38]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 15:33:38]	compilation failed at : "e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I. -I.cmsis/include -IRTE/_Volley_ok -D"USE_HAL_DRIVER" -D"STM32F407xx" --cpu Cortex-M4.fp --li --c99 -O0 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\Volley_ok\.obj\hitball.o --no_depend_system_headers --depend .\build\Volley_ok\.obj\hitball.d .\hitball.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\hitball.c", line 76: Error:  #20: identifier "kp" is undefined
+          RobStrideMotionControl(&R_up, 0x01, R_up_expect.expect_torque, R_up_expect.expect_angle, R_up_expect.expect_omega, kp, kd);
+                                                                                                                             ^
+".\hitball.c", line 76: Error:  #20: identifier "kd" is undefined
+          RobStrideMotionControl(&R_up, 0x01, R_up_expect.expect_torque, R_up_expect.expect_angle, R_up_expect.expect_omega, kp, kd);
+                                                                                                                                 ^
+.\hitball.c: 0 warnings, 2 errors
+
+[2026-01-31 15:33:48]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 15:33:48]	[done]
+	build successfully !
+
+[2026-01-31 15:34:47]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 15:34:48]	[done]
+	build successfully !
+
+[2026-01-31 15:34:52]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 15:34:53]	[done]
+	build successfully !
+
+[2026-01-31 15:36:28]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 15:36:29]	[done]
+	build successfully !
+
+[2026-01-31 15:38:30]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 15:38:30]	[done]
+	build successfully !
+
+[2026-01-31 15:43:47]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-01-31 15:43:47]	[done]
+	build successfully !
+
+[2026-01-31 15:47:59]	[done]
+	build successfully !
+
+[2026-02-01 11:24:42]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-02-01 11:24:44]	[done]
+	build successfully !
+
+[2026-02-01 11:25:47]	[done]
+	build successfully !
+
+[2026-02-01 20:17:35]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'e:\My_enginerring\Hit-ball\MDK-ARM\Chassis.c': source file has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\Task_Init.c': dependence 'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.h' has been changed.
+'e:\My_enginerring\Hit-ball\MDK-ARM\hitball.c': source file has been changed.
+
+[2026-02-01 20:17:38]	[done]
+	build successfully !
+

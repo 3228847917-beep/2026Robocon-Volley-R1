@@ -33,12 +33,12 @@ void Task_Init(){
           3,
           &Move_Remote_Handle);
 					
-	xTaskCreate(Volleyball_Serve,
-         "hit_ball",
-          256,
-          NULL,
-          3,
-          &Volleyball_Serve_Handle);
+//	xTaskCreate(Volleyball_Serve,
+//         "hit_ball",
+//          256,
+//          NULL,
+//          3,
+//          &Volleyball_Serve_Handle);
 					
 	vPortExitCritical();
 }

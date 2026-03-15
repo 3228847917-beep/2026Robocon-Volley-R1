@@ -10,9 +10,9 @@
 //电机驱动
 Motor_param motor1 = {
 .PID = {
-	.Kp = 1.0f,
+	.Kp = 7.0f,
 	.Ki = 0.0f,
-	.Kd = 0.0f,
+	.Kd = 40.0f,
 	.limit = 10000.0f,
 	.output_limit = 40.0f,
 },
@@ -23,9 +23,9 @@ Motor_param motor1 = {
 };
 Motor_param motor2 = {
 .PID = {
-	.Kp = 1.0f,
+	.Kp = 7.0f,
 	.Ki = 0.0f,
-	.Kd = 0.0f,
+	.Kd = 40.0f,
 	.limit = 10000.0f,
 	.output_limit = 40.0f,
 },
@@ -36,9 +36,9 @@ Motor_param motor2 = {
 };
 Motor_param motor3 = {
 .PID = {
-	.Kp = 1.0f,
+	.Kp = 7.0f,
 	.Ki = 0.0f,
-	.Kd = 0.0f,
+	.Kd = 40.0f,
 	.limit = 10000.0f,
 	.output_limit = 40.0f,
 },
@@ -82,12 +82,16 @@ void Remote(void *pvParameters)
 	{
 		if(MODE == REMOTE)
 		{			
-			v1 = -Vx*0.5f+Vy*(sqrt(3.0f)/2.0) + R * Wz;
-			v2 = -Vx*0.5f- Vy*(sqrt(3.0f)/2.0) + R * Wz;
-			v3 = Vx + R * Wz;
+//			v1 = -Vx*0.5f+Vy*(sqrt(3.0f)/2.0) + R * Wz;
+//			v2 = -Vx*0.5f-Vy*(sqrt(3.0f)/2.0) + R * Wz;
+//			v3 = Vx + R * Wz;
+			
+			v1 = -Vy*0.5f+Vx*(sqrt(3.0f)/2.0) + R * Wz;
+			v2 = -Vy*0.5f-Vx*(sqrt(3.0f)/2.0) + R * Wz;
+			v3 = Vy + R * Wz;			
 			
 			wheel_one=  -((v1 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
-			wheel_two=  ((v2 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
+			wheel_two = ((v2 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
 			wheel_three=-((v3 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
 			
 			PID_Control2((float)(motor1.steering.epm / 7.0f/(3.4f)), wheel_one, &motor1.PID);
@@ -113,6 +117,7 @@ void Remote(void *pvParameters)
 		vTaskDelayUntil(&last_wake_time, pdMS_TO_TICKS(2));
 	}
 }
+
 extern SemaphoreHandle_t remote_semaphore;
 
 TaskHandle_t Move_Remote_Handle;
@@ -144,10 +149,10 @@ void Move_Remote(void *pvParameters){
 
      if(MODE == REMOTE)
       {
-					//遥控映射
-            Vy = -(Remote_Control.Ex / 2047.0f) * MAX_VELOCITY;
-            Vx = -(Remote_Control.Ey / 2047.0f) * MAX_VELOCITY;
-            Wz = (Remote_Control.Eomega / 2047.0f) * MAX_OMEGA;
+			  //遥控映射
+				Vx = -(Remote_Control.Ex / 2047.0f) * MAX_VELOCITY;
+				Vy = -(Remote_Control.Ey / 2047.0f) * MAX_VELOCITY;
+				Wz = (Remote_Control.Eomega / 2047.0f) * MAX_OMEGA;
 //			//进行击球动作（flag转到hitball.c）
 //			if(Remote_Control.First.Right_Key_Up== 1 && Remote_Control.Second.Right_Key_Up == 0)
 //		  	{

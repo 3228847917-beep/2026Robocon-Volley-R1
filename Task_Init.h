@@ -17,89 +17,41 @@
 #include "PID_old.h"
 #include "math.h"
 
-#define Remote_BT_0_WIFI_1 1
 
-#if !Remote_BT_0_WIFI_1
-#pragma pack(1)
-typedef struct
-{
-  uint16_t Left_Key_Up : 1;
-  uint16_t Left_Key_Down : 1;
-  uint16_t Left_Key_Left : 1;
-  uint16_t Left_Key_Right : 1;
-  uint16_t Left_Rocker : 1;
-  uint16_t Left_Encoder : 1;
-  uint16_t Left_Switch_Up : 1;
-  uint16_t Left_Switch_Down : 1;  
-  uint16_t Right_Key_Up : 1;
-  uint16_t Right_Key_Down : 1;
-  uint16_t Right_Key_Left : 1;
-  uint16_t Right_Key_Right : 1;
-  uint16_t Right_Rocker : 1;
-  uint16_t Right_Encoder : 1;
-  uint16_t Right_Switch_Up : 1;
-  uint16_t Right_Switch_Down : 1;  
-  } hw_key_t;
+void Wheel_Task(void *pvParameters);
 
-typedef struct {
-	uint8_t head;
-	int16_t rocker[4];
-	hw_key_t Key;
-	uint32_t Left_Encoder;
-	uint32_t Right_Encoder;
-  uint16_t crc;
-} UART_DataPack;
-#pragma pack()
-j 
-#else
-
-#pragma pack(1)
 typedef struct{
-   uint8_t Left_Key_Up : 1;         
-   uint8_t Left_Key_Down : 1;       
-   uint8_t Left_Key_Left : 1;       
-   uint8_t Left_Key_Right : 1;       
-   uint8_t Left_Switch_Up_or_Left : 1;       
-   uint8_t Left_Switch_Down_or_Right: 1;       
-   uint8_t UNUSED1 : 1;
-   uint8_t UNUSED2 : 1;
+	uint8_t Left_Key_Up;         
+	uint8_t Left_Key_Down;       
+	uint8_t Left_Key_Left;       
+	uint8_t Left_Key_Right;       
+	uint8_t Left_Switch_Up;       
+	uint8_t Left_Switch_Down;
+	uint8_t Left_Broadside_Key;
 
-   uint8_t Right_Key_Up : 1;        
-   uint8_t Right_Key_Down : 1;      
-   uint8_t Right_Key_Left : 1;      
-   uint8_t Right_Key_Right : 1;     
-   uint8_t Right_Switch_Up_or_Right : 1;      
-   uint8_t Right_Switch_Down_or_Left : 1;      
-   uint8_t UNUSED3 : 1; 
-   uint8_t UNUSED4 : 1;
+	uint8_t Right_Key_Up;        
+	uint8_t Right_Key_Down;      
+	uint8_t Right_Key_Left;      
+	uint8_t Right_Key_Right;     
+	uint8_t Right_Switch_Up;      
+	uint8_t Right_Switch_Down;      
+	uint8_t Right_Broadside_Key;
 } hw_key_t;
-  
-//遥控模式（蓝牙）
-typedef struct {
-	uint8_t head;
-	int16_t rocker[4];
-	hw_key_t Key;
-	uint8_t end;
-} UART_DataPack;
-
-#pragma pack()
-#endif
 
 typedef struct {
     int16_t Ex;
     int16_t Ey;
     int16_t Eomega;
-	int16_t mode;
-    hw_key_t *Key_Control;
     hw_key_t First,Second;
 } Remote_Handle_t;
 
 
-extern uint8_t usart4_dma_buff[30]; //串口接收数据
 
-extern UART_DataPack RemoteData;  //将串口接收的数据存到这里
+#define KEY_RISING_EDGE(cur, last, field)  ((cur.field == 1) && (last.field == 0))
+
 extern Remote_Handle_t Remote_Control; //取出遥控器数据
-void Updatekey(Remote_Handle_t * xx);
+
+
 
 void Task_Init(void);
 

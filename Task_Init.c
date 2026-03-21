@@ -5,17 +5,14 @@
 #include "CANDrive.h"
 #include "hitball.h"
 
-void Updatekey(Remote_Handle_t * xx) 
-	{ 
-    xx->Second = xx->First;
-    xx->First = *xx->Key_Control;
-	}
-	
-void Task_Init(){
-	 //Ò£¿ØÆ÷
-    __HAL_UART_ENABLE_IT(&huart4, UART_IT_IDLE);
-    HAL_UART_Receive_DMA(&huart4, usart4_dma_buff, sizeof(usart4_dma_buff));
 
+extern uint8_t usart5_buff[30];
+void Task_Init(){
+	
+	 //Ò£¿ØÆ÷
+   __HAL_UART_ENABLE_IT(&huart5, UART_IT_IDLE);
+   HAL_UARTEx_ReceiveToIdle_DMA(&huart5, usart5_buff, sizeof(usart5_buff));
+   __HAL_DMA_DISABLE_IT(huart5.hdmarx, DMA_IT_HT);
 	
 	vPortEnterCritical();
 	
@@ -26,12 +23,12 @@ void Task_Init(){
           3,
           &Remote_Handle); 
 	
-	xTaskCreate(Move_Remote,
-         "Move_Remote",
-          256,
-          NULL,
-          3,
-          &Move_Remote_Handle);
+//	xTaskCreate(Move_Remote,
+//         "Move_Remote",
+//          256,
+//          NULL,
+//          3,
+//          &Move_Remote_Handle);
 					
 //	xTaskCreate(Volleyball_Serve,
 //         "hit_ball",

@@ -18,20 +18,24 @@
 #define CMD_RECEIVER_MESSAGEBOX             0x03
 #define CMD_RECEIVER_UPDATE_VIRTUAL_ITEM    0x04
 
-#define Right_Switch_Up     0x02
-#define Right_Switch_Down   0x04
-#define Right_Key_Up        0x10
-#define Right_Key_Left      0x08
-#define Right_Key_Right     0x20
-#define Right_Key_Down      0x40
-#define Left_Broadside_Key  0x80
-#define Right_Broadside_Key 0x100
-#define Left_Switch_Down    0x200
-#define Left_Switch_Up      0x400
-#define Left_Key_Down       0x800
-#define Left_Key_Left       0x1000
-#define Left_Key_Right      0x2000
-#define Left_Key_Up         0x4000
+#define KEY_Right_Switch_Up     (1 << 1)
+#define KEY_Right_Switch_Down   (1 << 2)
+
+#define KEY_Right_Key_Left      (1 << 3)
+#define KEY_Right_Key_Up        (1 << 4)
+#define KEY_Right_Key_Right     (1 << 5)
+#define KEY_Right_Key_Down      (1 << 6)
+
+#define KEY_Left_Broadside_Key  (1 << 7)
+#define KEY_Right_Broadside_Key (1 << 8)
+
+#define KEY_Left_Switch_Down    (1 << 9)
+#define KEY_Left_Switch_Up      (1 << 10)
+
+#define KEY_Left_Key_Down       (1 << 11)
+#define KEY_Left_Key_Left       (1 << 12)
+#define KEY_Left_Key_Right      (1 << 13)
+#define KEY_Left_Key_Up         (1 << 14)
 
 #pragma pack(1)
 

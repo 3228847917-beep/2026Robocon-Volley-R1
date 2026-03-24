@@ -9,6 +9,7 @@
 #include "data_poll.h"
 #include "My_list.h"
 #include "math.h"
+#include "jy61.h"
 
 //遥控器
 PackControl_t recv_pack;
@@ -16,15 +17,17 @@ uint8_t recv_buff[20] = {0};
 float rocker_filter[4] = {0};
 uint8_t usart5_buff[30];
 
+extern SemaphoreHandle_t Jy61_semaphore;
+extern SemaphoreHandle_t Remote_semaphore;
 
 //电机驱动
 Motor_param motor1 = {
 .PID = {
-	.Kp = 5.0f,
-	.Ki = 0.0f,
-	.Kd = 30.0f,
-	.limit = 10000.0f,
-	.output_limit = 40.0f,
+	.Kp = 4.5f,
+	.Ki = 0.008f,
+	.Kd = 3.0f,
+	.limit = 100000.0f,
+	.output_limit = 50.0f,
 },
 .steering={
 	.motor_id=0x01,
@@ -33,11 +36,11 @@ Motor_param motor1 = {
 };
 Motor_param motor2 = {
 .PID = {
-	.Kp = 5.0f,
-	.Ki = 0.0f,
-	.Kd = 30.0f,
-	.limit = 10000.0f,
-	.output_limit = 40.0f,
+	.Kp = 4.5f,
+	.Ki = 0.008f,
+	.Kd = 3.0f,
+	.limit = 100000.0f,
+	.output_limit = 50.0f,
 },
 .steering={
 	.motor_id=0x02,
@@ -46,11 +49,11 @@ Motor_param motor2 = {
 };
 Motor_param motor3 = {
 .PID = {
-	.Kp = 5.0f,
-	.Ki = 0.0f,
-	.Kd = 30.0f,
-	.limit = 10000.0f,
-	.output_limit = 40.0f,
+	.Kp = 4.5f,
+	.Ki = 0.008f,
+	.Kd = 3.0f,
+	.limit = 100000.0f,
+	.output_limit = 50.0f,
 },
 .steering={
 	.motor_id=0x03,
@@ -68,7 +71,7 @@ Motor_param motor3 = {
 extern uint8_t flag;
 
 //遥控模式
-Positon_label MODE = REMOTE;
+Chassis_MODE MODE = REMOTE;
 
 volatile float Vx =0;   //前后移动
 volatile float Vy =0;   //左右移动
@@ -108,16 +111,24 @@ static void Key_Parse(uint32_t key, hw_key_t *out)
 
 void Remote_Analysis()
 {
-	/* 1. 保存上一帧 */
-	Remote_Control.Second = Remote_Control.First;
-	/* 2. 解析当前按键 */
-	Key_Parse(recv_pack.Key, &Remote_Control.First);
-	
-	Remote_Control.Ex = recv_pack.rocker[1] / 1847.0f *MAX_ROBOT_VEL;
-	Remote_Control.Ey = recv_pack.rocker[0] / 1798.0f *MAX_ROBOT_VEL;
-	Remote_Control.Eomega = recv_pack.rocker[2] / 1847.0f * MAX_ROBOT_OMEGA;
-}
+    if(xSemaphoreTake(Remote_semaphore, pdMS_TO_TICKS(200)) == pdTRUE)
+    {
+      /* 1. 保存上一帧 */
+      Remote_Control.Second = Remote_Control.First;
+      /* 2. 解析当前按键 */
+      Key_Parse(recv_pack.Key, &Remote_Control.First);
 
+			Remote_Control.Ex = recv_pack.rocker[1] / 1977.0f *MAX_ROBOT_VEL;
+			Remote_Control.Ey = recv_pack.rocker[0] / 1798.0f *MAX_ROBOT_VEL;
+			Remote_Control.Eomega = recv_pack.rocker[2] / 1847.0f * MAX_ROBOT_OMEGA;
+    }else {
+      Remote_Control.Ex = 0;
+      Remote_Control.Ey = 0;
+      Remote_Control.Eomega = 0;
+			
+      memset(&Remote_Control.First, 0, sizeof(Remote_Control.First));
+    }
+}
 
 //遥控器滤波降噪 
 void Rocker_Filter(PackControl_t *data)
@@ -137,6 +148,9 @@ void MyRecvCallback(uint8_t *src, uint16_t size, void *user_data)
     memcpy(&recv_buff, src, size);
     memcpy(&recv_pack, recv_buff, sizeof(recv_pack));
     Rocker_Filter(&recv_pack);
+    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+    xSemaphoreGiveFromISR(Remote_semaphore, &xHigherPriorityTaskWoken);
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
 
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size)
@@ -181,10 +195,10 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
     }
 }
 
-
 CommPackRecv_Cb recv_cb = MyRecvCallback;
 
 TaskHandle_t Remote_Handle;
+
 void Remote(void *pvParameters)
 {
 	TickType_t last_wake_time = xTaskGetTickCount();
@@ -201,32 +215,22 @@ void Remote(void *pvParameters)
 				Vy = -Remote_Control.Ey;
 		    Wz = Remote_Control.Eomega;
 			
-			v1 = -Vy*0.5f+Vx*(sqrt(3.0f)/2.0) + R * Wz;
-			v2 = -Vy*0.5f-Vx*(sqrt(3.0f)/2.0) + R * Wz;
+			v1 = -Vy*0.5f+Vx*(sqrtf(3.0f)/2.0f) + R * Wz;
+			v2 = -Vy*0.5f-Vx*(sqrtf(3.0f)/2.0f) + R * Wz;
 			v3 = Vy + R * Wz;			
 			
 			wheel_one=  -((v1 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
 			wheel_two = (( v2 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
 			wheel_three=-((v3 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
 			
-			PID_Control2((float)(motor1.steering.epm / 7.0f/(3.4f)), wheel_one, &motor1.PID);
-			PID_Control2((float)(motor2.steering.epm / 7.0f/(3.4f)), wheel_two, &motor2.PID);
-			PID_Control2((float)(motor3.steering.epm / 7.0f/(3.4f)), wheel_three,&motor3.PID);
-
-			vTaskDelay(1);
+			//PID_Control2((float)(motor1.steering.epm / 7.0f/(3.4f)), 0, &motor1.PID);
+			PID_Control2((float)(((float)motor1.steering.epm / 7.0f/(3.4f))), wheel_one, &motor1.PID);
+      PID_Control2((float)(((float)motor2.steering.epm / 7.0f/(3.4f))), wheel_two, &motor2.PID);
+			PID_Control2((float)(((float)motor3.steering.epm / 7.0f/(3.4f))), wheel_three, &motor3.PID);
+			
       VESC_SetCurrent(&motor1.steering, motor1.PID.pid_out);
       VESC_SetCurrent(&motor2.steering, motor2.PID.pid_out);
 	    VESC_SetCurrent(&motor3.steering, motor3.PID.pid_out);  
-			
-			if(recv_pack.rocker[0] == 0 || recv_pack.rocker[1] == 0 ||recv_pack.rocker[2] == 0 )
-			{
-        Remote_Control.Ex = 0;
-				Remote_Control.Ey = 0;
-				Remote_Control.Eomega = 0;
-
-				//按键状态清零
-				memset(&recv_pack.Key, 0, sizeof(uint32_t));
-		 	}
   
 		}
 		if(MODE == STP || MODE == STOP )
@@ -243,29 +247,22 @@ void Remote(void *pvParameters)
 	}
 }
 
-
-////遥控任务
-//TaskHandle_t Move_Remote_Handle;
-//void Move_Remote(void *pvParameters){
-//	
-//	TickType_t last_wake_time = xTaskGetTickCount();
-//	
-
-//	
-//    for(;;)
-//    {
-
-//				
-//				if(MODE == REMOTE)
-//      {
-
-
-//      }
-//			
-
-//		vTaskDelayUntil(&last_wake_time, pdMS_TO_TICKS(2));
-//    }
-//}
+TaskHandle_t Remote_JY61_Handle;
+void Remote_JY61(void *pvParameters){
+    TickType_t last_wake_time = xTaskGetTickCount();
+		g_comm_handle = Comm_Init(&huart5);
+    RemoteCommInit(NULL);
+    register_comm_recv_cb(recv_cb, 0x01, &recv_pack);
+	
+    for(;;)
+    {
+				if(xSemaphoreTake(Jy61_semaphore, pdMS_TO_TICKS(200)) == pdTRUE)
+				{
+						JY61_Receive(&JY61, usart5_buff, sizeof(JY61));
+				}
+        vTaskDelayUntil(&last_wake_time, pdMS_TO_TICKS(5));
+    }
+}
 
 void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {

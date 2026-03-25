@@ -11,11 +11,21 @@
 #include "math.h"
 #include "jy61.h"
 
+//×ËÌ¬½ÃÕý·ÀÖ¹´ò»¬
+PID2 JY61_adjust = {
+	.Kp = 0.0f,
+	.Ki = 0.0f,
+	.Kd = 0.0f,
+	.limit = 10000.0f,
+	.output_limit = 50.0f,
+};
+
 //Ò£¿ØÆ÷
 PackControl_t recv_pack;
 uint8_t recv_buff[20] = {0};
 float rocker_filter[4] = {0};
-uint8_t usart5_buff[30];
+uint8_t uart5_buff[30];
+uint8_t uart4_buff[30];
 
 extern SemaphoreHandle_t Jy61_semaphore;
 extern SemaphoreHandle_t Remote_semaphore;
@@ -127,6 +137,9 @@ void Remote_Analysis()
       Remote_Control.Eomega = 0;
 			
       memset(&Remote_Control.First, 0, sizeof(Remote_Control.First));
+			
+			PID_Control2(JY61.Angle.Multiturn, 0, &JY61_adjust);
+			Wz = JY61_adjust.pid_out;
     }
 }
 
@@ -158,8 +171,8 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size)
 	if (huart->Instance == UART5)
 	{
 		HAL_UART_DMAStop(&huart5);
-		Comm_UART_IRQ_Handle(g_comm_handle, &huart5, usart5_buff,size);
-		HAL_UARTEx_ReceiveToIdle_DMA(&huart5, usart5_buff,sizeof(usart5_buff));
+		Comm_UART_IRQ_Handle(g_comm_handle, &huart5, uart5_buff,size);
+		HAL_UARTEx_ReceiveToIdle_DMA(&huart5, uart5_buff,sizeof(uart5_buff));
    		__HAL_DMA_DISABLE_IT(huart5.hdmarx, DMA_IT_HT);
 	}
 }
@@ -189,8 +202,8 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
             volatile uint32_t temp_sr = READ_REG(huart->Instance->SR);
         }
 			}
-      Comm_UART_IRQ_Handle(g_comm_handle, &huart5, usart5_buff, 0);
-      HAL_UARTEx_ReceiveToIdle_DMA(&huart5, usart5_buff,sizeof(usart5_buff));
+      Comm_UART_IRQ_Handle(g_comm_handle, &huart5, uart5_buff, 0);
+      HAL_UARTEx_ReceiveToIdle_DMA(&huart5, uart5_buff,sizeof(uart5_buff));
       __HAL_DMA_DISABLE_IT(huart5.hdmarx, DMA_IT_HT);
     }
 }
@@ -223,7 +236,6 @@ void Remote(void *pvParameters)
 			wheel_two = (( v2 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
 			wheel_three=-((v3 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
 			
-			//PID_Control2((float)(motor1.steering.epm / 7.0f/(3.4f)), 0, &motor1.PID);
 			PID_Control2((float)(((float)motor1.steering.epm / 7.0f/(3.4f))), wheel_one, &motor1.PID);
       PID_Control2((float)(((float)motor2.steering.epm / 7.0f/(3.4f))), wheel_two, &motor2.PID);
 			PID_Control2((float)(((float)motor3.steering.epm / 7.0f/(3.4f))), wheel_three, &motor3.PID);
@@ -231,7 +243,6 @@ void Remote(void *pvParameters)
       VESC_SetCurrent(&motor1.steering, motor1.PID.pid_out);
       VESC_SetCurrent(&motor2.steering, motor2.PID.pid_out);
 	    VESC_SetCurrent(&motor3.steering, motor3.PID.pid_out);  
-  
 		}
 		if(MODE == STP || MODE == STOP )
 		{
@@ -249,18 +260,20 @@ void Remote(void *pvParameters)
 
 TaskHandle_t Remote_JY61_Handle;
 void Remote_JY61(void *pvParameters){
+	
     TickType_t last_wake_time = xTaskGetTickCount();
-		g_comm_handle = Comm_Init(&huart5);
+	
+		g_comm_handle = Comm_Init(&huart4);
     RemoteCommInit(NULL);
-    register_comm_recv_cb(recv_cb, 0x01, &recv_pack);
+    register_comm_recv_cb(recv_cb, 0x02, &recv_pack);
 	
     for(;;)
     {
-				if(xSemaphoreTake(Jy61_semaphore, pdMS_TO_TICKS(200)) == pdTRUE)
-				{
-						JY61_Receive(&JY61, usart5_buff, sizeof(JY61));
-				}
-        vTaskDelayUntil(&last_wake_time, pdMS_TO_TICKS(5));
+			if(xSemaphoreTake(Jy61_semaphore, pdMS_TO_TICKS(200)) == pdTRUE)
+			{
+					JY61_Receive(&JY61, uart4_buff, sizeof(JY61));
+			}
+			vTaskDelayUntil(&last_wake_time, pdMS_TO_TICKS(5));
     }
 }
 

@@ -15,12 +15,11 @@ extern SemaphoreHandle_t Jy61_semaphore;
 extern SemaphoreHandle_t remote_semaphore;
 
 
-
 //陀螺仪姿态矫正
 PID2 JY61_adjust = {
-	.Kp = 0.0f,
+	.Kp = 0.6f,
 	.Ki = 0.0f,
-	.Kd = 0.0f,
+	.Kd = 0.1f,
 	.limit = 10000.0f,
 	.output_limit = 50.0f,
 };
@@ -81,8 +80,8 @@ Motor_param motor3 = {
 //extern GPIO_PinState GPIOB11_State;
 //extern GPIO_PinState GPIOB12_State;
 //extern GPIO_PinState GPIOB13_State;
-extern uint8_t flag;
-volatile float Wz_correction;
+extern uint8_t flag_two;
+
 //遥控模式
 Positon_label MODE = REMOTE;
 
@@ -123,51 +122,37 @@ static void Key_Parse(uint32_t key, hw_key_t *out)
 }
 
 static float lock_Yaw = 0.0f;
-//void Remote_Analysis()
-//{
-//    if(xSemaphoreTake(remote_semaphore, pdMS_TO_TICKS(200)) == pdTRUE)
-//    {
-//      /* 1. 保存上一帧 */
-//      Remote_Control.Second = Remote_Control.First;
-//      /* 2. 解析当前按键 */
-//      Key_Parse(recv_pack.Key, &Remote_Control.First);
-
-//			Remote_Control.Ex = recv_pack.rocker[1] / 1977.0f *MAX_ROBOT_VEL;
-//			Remote_Control.Ey = recv_pack.rocker[0] / 1798.0f *MAX_ROBOT_VEL;
-//			Remote_Control.Eomega = recv_pack.rocker[2] / 1847.0f * MAX_ROBOT_OMEGA;
-//    }else {
-//	    Remote_Control.Ex = 0;
-//      Remote_Control.Ey = 0;
-//      Remote_Control.Eomega = 0;
-//			
-//      memset(&Remote_Control.First, 0, sizeof(Remote_Control.First));
-//			
-//			float XY_Acc = sqrtf(JY61.Acceleration.X * JY61.Acceleration.X + JY61.Acceleration.Y * JY61.Acceleration.Y);
-//			
-//			float current_Yaw = JY61.Angle.Multiturn;
-////			lock_Yaw = current_Yaw;
-//			
-//			if(XY_Acc <= MAX_Acc){
-//				lock_Yaw = current_Yaw;
-//		  }else{
-//				
-//			}
-//		  PID_Control2(current_Yaw, lock_Yaw, &JY61_adjust);
-//      Wz = JY61_adjust.pid_out * (PI/180.0f);
-//			
-//    }
-//}
 void Remote_Analysis()
 {
-	/* 1. 保存上一帧 */
-	Remote_Control.Second = Remote_Control.First;
-	/* 2. 解析当前按键 */
-	Key_Parse(recv_pack.Key, &Remote_Control.First);
-	
-	Remote_Control.Ex = recv_pack.rocker[1] / 1977.0f *MAX_ROBOT_VEL;
-	Remote_Control.Ey = recv_pack.rocker[0] / 1798.0f *MAX_ROBOT_VEL;
-	Remote_Control.Eomega = recv_pack.rocker[2] / 1847.0f * MAX_ROBOT_OMEGA;
+    if(xSemaphoreTake(remote_semaphore, pdMS_TO_TICKS(200)) == pdTRUE)
+    {
+      /* 1. 保存上一帧 */
+      Remote_Control.Second = Remote_Control.First;
+      /* 2. 解析当前按键 */
+      Key_Parse(recv_pack.Key, &Remote_Control.First);
+
+			Remote_Control.Ex = recv_pack.rocker[1] / 1977.0f *MAX_ROBOT_VEL;
+			Remote_Control.Ey = recv_pack.rocker[0] / 1798.0f *MAX_ROBOT_VEL;
+			Remote_Control.Eomega = recv_pack.rocker[2] / 1847.0f * MAX_ROBOT_OMEGA;
+    }else {
+	    Remote_Control.Ex = 0;
+      Remote_Control.Ey = 0;
+      Remote_Control.Eomega = 0;
+			
+      memset(&Remote_Control.First, 0, sizeof(Remote_Control.First));
+    }
 }
+//void Remote_Analysis()
+//{
+//	/* 1. 保存上一帧 */
+//	Remote_Control.Second = Remote_Control.First;
+//	/* 2. 解析当前按键 */
+//	Key_Parse(recv_pack.Key, &Remote_Control.First);
+//	
+//	Remote_Control.Ex = recv_pack.rocker[1] / 1977.0f *MAX_ROBOT_VEL;
+//	Remote_Control.Ey = recv_pack.rocker[0] / 1798.0f *MAX_ROBOT_VEL;
+//	Remote_Control.Eomega = recv_pack.rocker[2] / 1847.0f * MAX_ROBOT_OMEGA;
+//}
 
 
 //遥控器滤波降噪 
@@ -201,7 +186,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size)
 		HAL_UART_DMAStop(&huart5);
 		Comm_UART_IRQ_Handle(g_comm_handle, &huart5, usart5_buff,size);
 		HAL_UARTEx_ReceiveToIdle_DMA(&huart5, usart5_buff,sizeof(usart5_buff));
-   		__HAL_DMA_DISABLE_IT(huart5.hdmarx, DMA_IT_HT);
+   	__HAL_DMA_DISABLE_IT(huart5.hdmarx, DMA_IT_HT);
 	}
 }
 
@@ -236,6 +221,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
     }
 }
 
+volatile float Wz_correction;//反馈值
 CommPackRecv_Cb recv_cb = MyRecvCallback;
 
 TaskHandle_t Remote_Handle;
@@ -254,24 +240,40 @@ void Remote(void *pvParameters)
 			Vx = Remote_Control.Ex;
 			Vy = -Remote_Control.Ey;
 //			Wz = Remote_Control.Eomega;
-      float Wz_cmd = Remote_Control.Eomega;
+float Wz_cmd = Remote_Control.Eomega;
+			//前馈
+			float Wz_ff = 0;
 			
-			if (fabs(Vy) > Deadzone_X && fabs(Wz_cmd) < Deadzone_Z)
-			{
-				// 左右移动防打滑
-				Wz = Wz_correction + Wz_cmd;
-			}
-			else if (fabs(Wz_cmd) >= 0.05f)
-			{
-				// 自旋不干扰
-				Wz = Wz_cmd;
+			static float Vy_last = 0;
+			static float dVy_f = 0;
+			float dt = 0.002f;
 
-				JY61_adjust.error_inter = 0;
+			float dVy = (Vy - Vy_last) / dt;
+			Vy_last = Vy;
+
+			//Vy限幅
+			if (dVy > 2.0f)  {dVy = 2.0f;}
+			if (dVy < -2.0f) {dVy = -2.0f;}
+
+			//最终滤波
+			dVy_f = 0.7f * dVy_f + 0.3f * dVy;
+
+			if (fabs(dVy_f) > 5.0f)
+			{
+					Wz_ff = -0.02f * dVy_f;
+			}
+			//前馈Wz限幅
+			if (Wz_ff > 0.4f)  {Wz_ff = 0.4f;}
+			if (Wz_ff < -0.4f) {Wz_ff = -0.4f;}
+			//矫正判断
+			if (fabs(Wz_cmd) >= Deadzone_Z)
+			{
+				Wz = Wz_cmd;
 			}
 			else
 			{
-				// 其他情况（前进或者静止）则保持原始输入
-				Wz = Wz_cmd;
+				float k = fabs(Vy) / (fabs(Vx) + fabs(Vy) + 0.001f);
+				Wz = Wz_cmd + k * Wz_correction + Wz_ff;
 			}
 			
 			v1 = -Vy*0.5f+Vx*(sqrtf(3.0f)/2.0f) + R * Wz;
@@ -290,16 +292,20 @@ void Remote(void *pvParameters)
       VESC_SetCurrent(&motor2.steering, motor2.PID.pid_out);
 	    VESC_SetCurrent(&motor3.steering, motor3.PID.pid_out);  
 			
-		if(recv_pack.rocker[0] == 0 && recv_pack.rocker[1] == 0 && recv_pack.rocker[2] == 0 )
-//				if(abs(recv_pack.rocker[3]>1500))
+			if(KEY_RISING_EDGE(Remote_Control.Second, Remote_Control.First, Right_Key_Down))
 			{
-	    Remote_Control.Ex = 0;
-      Remote_Control.Ey = 0;
-      Remote_Control.Eomega = 0;
-			
-      memset(&Remote_Control.First, 0, sizeof(Remote_Control.First));
-			
-		 	}
+				flag_two = 1;
+			}
+//		if(recv_pack.rocker[0] == 0 && recv_pack.rocker[1] == 0 && recv_pack.rocker[2] == 0 )
+////				if(abs(recv_pack.rocker[3]>1500))第二判断法
+//			{
+//	    Remote_Control.Ex = 0;
+//      Remote_Control.Ey = 0;
+//      Remote_Control.Eomega = 0;
+//			
+//      memset(&Remote_Control.First, 0, sizeof(Remote_Control.First));
+//			
+//		 	}
 		}
 		if(MODE == STP || MODE == STOP )
 		{
@@ -326,19 +332,19 @@ void Remote_JY61(void *pvParameters){
 	{
 	 float gyro_z = JY61.AngularVelocity.Z;
 	
-   gyro_z_filter = 0.8f * gyro_z_filter + 0.2f * gyro_z;
+   gyro_z_filter = 0.7f * gyro_z_filter + 0.3f * gyro_z;
    gyro_z = gyro_z_filter;
 		if (fabs(gyro_z) < 0.5f)
 		{
 				gyro_z = 0;
 		}
-
+  
 		PID_Control2(gyro_z, 0.0f, &JY61_adjust);
 
 		float out = JY61_adjust.pid_out;
 
-		if (out > 2.0f)  {out = 2.0f;}
-		if (out < -2.0f) {out = -2.0f;}
+		if (out > 1.0f)  {out = 1.0f;}
+		if (out < -1.0f) {out = -1.0f;}
 		
 		if (fabs(out) < 0.05f)//防抖
 		{
@@ -346,7 +352,7 @@ void Remote_JY61(void *pvParameters){
 		}
 		//滤波
 		static float wz_f = 0;
-		wz_f = 0.7f * wz_f + 0.3f * out;
+		wz_f = 0.5f * wz_f + 0.5f * out;
 
 		Wz_correction = wz_f;
 

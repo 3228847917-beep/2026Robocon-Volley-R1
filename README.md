@@ -9,7 +9,7 @@ Ki = 200.0
 双电机(灵足04电机)进行排球击球装置(作废)
 力矩以及机构出现局限性，改为三气缸控制
 
-遥控器使用ESP23-S3
+遥控器使用ESP32-S3
 遥控器的发送模块由HC12换为EBYTE的E32型(作废)
 存在距离限制换为HC12
 
@@ -25,5 +25,5 @@ main.c--->freertos.c--->Task_Init.c开始任务调度
 自动回球装置:hitball.c
 遥控器(ESP32-S3)相关文件:(My_list)(comm)(dataFrame0(data_poll)(comm_stm32_hal_middle)
 三次多项式(起初为了配合双电机击球装置(RobStride.c)使其达到最大速度):step.c
-CAN:CANDrive.c
+CAN总线通信:CANDrive.c
 

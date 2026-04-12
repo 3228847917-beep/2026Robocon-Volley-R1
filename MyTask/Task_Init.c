@@ -34,19 +34,19 @@ void Task_Init(){
           3,
           &Remote_JY61_Handle);
 					
-//	xTaskCreate(Volleyball_Serve,
-//         "hit_ball",
-//          256,
-//          NULL,
-//          3,
-//          &Volleyball_Serve_Handle);
+	xTaskCreate(Volleyball_Serve,
+         "hit_ball",
+          400,
+          NULL,
+          3,
+          &Volleyball_Serve_Handle);
 
-//	xTaskCreate(Remote_Go,
-//         "Remote_Go",
-//          256,
-//          NULL,
-//          3,
-//          &Remote_Go_Handle);
+	xTaskCreate(Remote_Go,
+         "Remote_Go",
+          400,
+          NULL,
+          3,
+          &Remote_Go_Handle);
 	vPortExitCritical();
 }
 

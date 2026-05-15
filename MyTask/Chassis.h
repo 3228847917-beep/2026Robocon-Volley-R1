@@ -25,14 +25,15 @@ typedef enum {
      STOP,//遥控模式下的急停
      REMOTE,
 	   CHOOSE,
-}Positon_label;
+}Chassis_label;
 
 //任务
 extern TaskHandle_t Remote_JY61_Handle;
 extern TaskHandle_t Remote_Handle;
 extern TaskHandle_t Remote_Go_Handle;
+
 //模式
-extern Positon_label MODE;
+extern Chassis_label MODE;
 
 //任务函数
 void Remote(void *pvParameters);

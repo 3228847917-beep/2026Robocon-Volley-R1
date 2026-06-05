@@ -5,10 +5,11 @@
 #include <stdbool.h>
 #include "PID_old.h"
 #include "VESC.h"
+#include "motorEx.h"
 
 #define PI 3.14159265359f
-#define MAX_ROBOT_VEL 4.0f	  // 底盘最大速度
-#define MAX_ROBOT_OMEGA PI	 	 //最大角速度
+#define MAX_ROBOT_VEL 30.0f	  // 底盘最大速度
+#define MAX_ROBOT_OMEGA PI * 15	 	 //最大角速度
 #define R 0.457f	 	//整车半径
 #define WHEEL_RADIUS 0.075f  //轮的半径
 #define Deadzone_Z 0.09f
@@ -16,7 +17,7 @@
 //电机参数
 typedef struct{
 	PID2 PID;
-	VESC_t steering;
+	Motor3508Ex_t steering;
 
 }Motor_param;
 
@@ -42,4 +43,6 @@ void Remote_Go(void *pvParameters);
 
 void Remote_Analysis();
 
+
+void MyRecvCallback(uint8_t *src, uint16_t size, void *user_data);
 #endif

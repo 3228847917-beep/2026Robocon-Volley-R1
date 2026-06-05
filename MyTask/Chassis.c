@@ -29,88 +29,49 @@ uint8_t recv_buff[20] = {0};
 float rocker_filter[4] = {0};
 uint8_t usart5_buff[30];
 uint8_t uart4_buff[30];
-
+int16_t motorCurrentBuf[4] = {0}; // 用于3508发送变量
 
 //电机驱动
 Motor_param motor1 = {
 .PID = {
-	.Kp = 0.3f,
-	.Ki = 0.0005f,
-	.Kd = 1.5f,
-	.limit = 10000.0f,
-	.output_limit = 40.0f,
+	.Kp = 20.0f,
+	.Ki = 1.5f,
+	.Kd = 2.0f,
+	.limit = 16384.0f,
+	.output_limit = 10000.0f,
 },
 .steering={
-	.motor_id=0x01,
+	.ID=0x201,
 	.hcan = &hcan2,
 }
 };
 Motor_param motor2 = {
 .PID = {
-	.Kp = 0.3f,
-	.Ki = 0.0005f,
-	.Kd = 1.5f,
-	.limit = 10000.0f,
-	.output_limit = 40.0f,
+	.Kp = 20.0f,
+	.Ki = 1.5f,
+	.Kd = 2.0f,
+	.limit = 16384.0f,
+	.output_limit = 10000.0f,
 },
 .steering={
-	.motor_id=0x02,
+	.ID=0x202,
 	.hcan = &hcan2,                                                                                                                                                             
 }
 };
 Motor_param motor3 = {
 .PID = {
-	.Kp = 0.3f,
-	.Ki = 0.0005f,
-	.Kd = 1.5f,
-	.limit = 10000.0f,
-	.output_limit = 40.0f,
+	.Kp = 20.0f,
+	.Ki = 1.5f,
+	.Kd = 2.0f,
+	.limit = 16384.0f,
+	.output_limit = 10000.0f,
 },
 .steering={
-	.motor_id=0x03,
+	.ID=0x203,
 	.hcan = &hcan2,
 }
 };
-//Motor_param motor1 = {
-//.PID = {   
-//	.Kp = 4.5f,
-//  .Ki = 0.008f,
-//  .Kd = 3.0f,
-//  .limit = 100000.0f,
-//  .output_limit = 50.0f,
-//},
-//.steering={
-//	.motor_id=0x01,
-//	.hcan = &hcan2,
-//}
-//};
-//Motor_param motor2 = {
-//.PID = {
-//	.Kp = 4.5f,
-//  .Ki = 0.008f,
-//  .Kd = 3.0f,
-//  .limit = 100000.0f,
-//  .output_limit = 50.0f,
-//},
-//.steering={
-//	.motor_id=0x02,
-//	.hcan = &hcan2,
-//}
-//};
-//Motor_param motor3 = {
-//.PID = {
-//	.Kp = 4.5f,
-//  .Ki = 0.008f,
-//  .Kd = 3.0f,
-//  .limit = 100000.0f,
-//  .output_limit = 50.0f,
-//},
-//.steering={
-//	.motor_id=0x03,
-//	.hcan = &hcan2,
-//}
-//};
-extern uint8_t flag_two;
+
 
 //遥控模式
 Chassis_label MODE = REMOTE;
@@ -135,7 +96,7 @@ float lowpass_filter(float new_sample, float *prev_filter, float alpha)
 
 static void Key_Parse(uint32_t key, hw_key_t *out)
 {
-  	out->Right_Switch_Up     = (key & KEY_Right_Switch_Up)     ? 1 : 0;
+    out->Right_Switch_Up     = (key & KEY_Right_Switch_Up)     ? 1 : 0;
     out->Right_Switch_Down   = (key & KEY_Right_Switch_Down)   ? 1 : 0;
 
     out->Right_Key_Up        = (key & KEY_Right_Key_Up)        ? 1 : 0;
@@ -156,26 +117,24 @@ static void Key_Parse(uint32_t key, hw_key_t *out)
     out->Left_Broadside_Key  = (key & KEY_Left_Broadside_Key)  ? 1 : 0;
 }
 
-static float lock_Yaw = 0.0f;
 void Remote_Analysis()
 {
     if(xSemaphoreTake(remote_semaphore, pdMS_TO_TICKS(200)) == pdTRUE)
     {
       /* 1. 保存上一帧 */
       Remote_Control.Second = Remote_Control.First;
+			
       /* 2. 解析当前按键 */
       Key_Parse(recv_pack.Key, &Remote_Control.First);
-			
-			Remote_Control.Ex = recv_pack.rocker[1] / 1597.0f *MAX_ROBOT_VEL;
-			Remote_Control.Ey = recv_pack.rocker[0] / 1597.0f *MAX_ROBOT_VEL;
-			Remote_Control.Eomega = recv_pack.rocker[2] / 1597.0f * MAX_ROBOT_OMEGA;
-    }
-		else
-		{
-	    Remote_Control.Ex = 0;
+
+      Remote_Control.Ex = - recv_pack.rocker[0] / 1647.0f *MAX_ROBOT_VEL;
+      Remote_Control.Ey = recv_pack.rocker[1] / 1647.0f *MAX_ROBOT_VEL;
+      Remote_Control.Eomega = recv_pack.rocker[2] / 1647.0f * MAX_ROBOT_OMEGA;
+    }else {
+      Remote_Control.Ex = 0;
       Remote_Control.Ey = 0;
       Remote_Control.Eomega = 0;
-			
+
       memset(&Remote_Control.First, 0, sizeof(Remote_Control.First));
     }
 }
@@ -184,51 +143,54 @@ void MyRecvCallback(uint8_t *src, uint16_t size, void *user_data)
 {
     memcpy(&recv_buff, src, size);
     memcpy(&recv_pack, recv_buff, sizeof(recv_pack));
-	  xSemaphoreGive(remote_semaphore);
+    xSemaphoreGive(remote_semaphore);
+//	  BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+//    xSemaphoreGiveFromISR(remote_semaphore, &xHigherPriorityTaskWoken);
+//    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
-CommPackRecv_Cb recv_cb = MyRecvCallback;
+CommPackRecv_Cb  recv_cb = MyRecvCallback;
 
 
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size)
 {
-	if(huart->Instance == UART5)
+	if (huart->Instance == UART5)
 	{
 		HAL_UART_DMAStop(&huart5);
 		Comm_UART_IRQ_Handle(g_comm_handle, &huart5, usart5_buff,size);
 		HAL_UARTEx_ReceiveToIdle_DMA(&huart5, usart5_buff,sizeof(usart5_buff));
-   	__HAL_DMA_DISABLE_IT(huart5.hdmarx, DMA_IT_HT);
+   		__HAL_DMA_DISABLE_IT(huart5.hdmarx, DMA_IT_HT);
 	}
 }
 
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 {
-    if(huart->Instance == UART5)
-    {
-			HAL_UART_DMAStop(huart);
-			// 重置HAL状态
-			huart->ErrorCode = HAL_UART_ERROR_NONE;
-			huart->RxState = HAL_UART_STATE_READY;
-			huart->gState = HAL_UART_STATE_READY;
-			
-			// 然后清除错误标志 - 按照STM32F4参考手册要求的顺序
-			uint32_t isrflags = READ_REG(huart->Instance->SR);
-			
-			// 按顺序处理各种错误标志，必须先读SR再读DR来清除错误
-			if (isrflags & (USART_SR_ORE | USART_SR_NE | USART_SR_FE)) 
-			{
+	if (huart->Instance == UART5)
+	{
+		HAL_UART_DMAStop(huart);
+		// 重置HAL状态
+		huart->ErrorCode = HAL_UART_ERROR_NONE;
+		huart->RxState = HAL_UART_STATE_READY;
+		huart->gState = HAL_UART_STATE_READY;
+		
+		// 然后清除错误标志 - 按照STM32F4参考手册要求的顺序
+		uint32_t isrflags = READ_REG(huart->Instance->SR);
+		
+		// 按顺序处理各种错误标志，必须先读SR再读DR来清除错误
+		if (isrflags & (USART_SR_ORE | USART_SR_NE | USART_SR_FE)) 
+		{
 				// 对于ORE、NE、FE错误，需要先读SR再读DR
 				volatile uint32_t temp_sr = READ_REG(huart->Instance->SR);
 				volatile uint32_t temp_dr = READ_REG(huart->Instance->DR); // 这个读取会清除ORE、NE、FE        
 
-			if (isrflags & USART_SR_PE)
-			{
+		if (isrflags & USART_SR_PE)
+		{
 				volatile uint32_t temp_sr = READ_REG(huart->Instance->SR);
-			 }
-			}
-      Comm_UART_IRQ_Handle(g_comm_handle, &huart5, usart5_buff, 0);
-      HAL_UARTEx_ReceiveToIdle_DMA(&huart5, usart5_buff,sizeof(usart5_buff));
-      __HAL_DMA_DISABLE_IT(huart5.hdmarx, DMA_IT_HT);
-    }
+		}
+	}
+		Comm_UART_IRQ_Handle(g_comm_handle, &huart5, usart5_buff, 0);
+		HAL_UARTEx_ReceiveToIdle_DMA(&huart5, usart5_buff,sizeof(usart5_buff));
+		__HAL_DMA_DISABLE_IT(huart5.hdmarx, DMA_IT_HT);
+	}
 }
 
 TaskHandle_t Remote_Go_Handle;
@@ -272,7 +234,7 @@ float Wz_cmd = Remote_Control.Eomega;
 			if (dVy < -300.0f) {dVy = -300.0f;}
 
 			//滤波
-			dVy_f = lowpass_filter(dVy, &dVy_f, 0.3f);
+			dVy_f = lowpass_filter(dVy, &dVy_f, 0.5f);
 
 			if (fabs(dVy_f) > 50.0f)
 			{
@@ -298,36 +260,36 @@ float Wz_cmd = Remote_Control.Eomega;
 			}
 			//最终滤波
 			static float Wz_out = 0;
-			Wz_out = lowpass_filter(Wz, &Wz_out, 0.3f);
+			Wz_out = lowpass_filter(Wz, &Wz_out, 0.6f);
 
 			Wz = Wz_out;
 			
-			v1 = -Vy*0.5f+Vx*(sqrtf(3.0f)/2.0f) + R * Wz;
-			v2 = -Vy*0.5f-Vx*(sqrtf(3.0f)/2.0f) + R * Wz;
-			v3 = Vy + R * Wz;			
+			v1 = +Vx*0.5f+Vy*(sqrtf(3.0f)/2.0f) - R * Wz;
+			v2 = -Vx*0.5f+Vy*(sqrtf(3.0f)/2.0f) + R * Wz;
+			v3 = -Vx - R * Wz;			
 			
 			wheel_one=  -((v1 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
 			wheel_two = (( v2 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
 			wheel_three=-((v3 / (2.0f * PI * WHEEL_RADIUS)) * 60.0f);
 			
-			PID_Control2((float)(((float)motor1.steering.epm / 7.0f/(3.4f))), wheel_one, &motor1.PID);
-      PID_Control2((float)(((float)motor2.steering.epm / 7.0f/(3.4f))), wheel_two, &motor2.PID);
-			PID_Control2((float)(((float)motor3.steering.epm / 7.0f/(3.4f))), wheel_three, &motor3.PID);
+			PID_Control2((float)(((float)motor1.steering.motor.Speed)), wheel_one, &motor1.PID);
+      PID_Control2((float)(((float)motor2.steering.motor.Speed)), wheel_two, &motor2.PID);
+			PID_Control2((float)(((float)motor3.steering.motor.Speed)), wheel_three, &motor3.PID);
 			
-      VESC_SetCurrent(&motor1.steering, motor1.PID.pid_out);
-      VESC_SetCurrent(&motor2.steering, motor2.PID.pid_out);
-	    VESC_SetCurrent(&motor3.steering, motor3.PID.pid_out);  
+			motorCurrentBuf[0] = motor1.PID.pid_out;
+			motorCurrentBuf[1] = motor2.PID.pid_out;
+			motorCurrentBuf[2] = motor3.PID.pid_out;
+			
+			MotorSend(&hcan2, 0x200, motorCurrentBuf);
 			
 		}
-		if(MODE == STP || MODE == STOP )
+		if(MODE == STP || MODE == STOP)
 		{
 			wheel_one = 0;
 			wheel_two = 0;
 			wheel_three=0;
-			
-			VESC_SetCurrent(&motor1.steering, 0);
-			VESC_SetCurrent(&motor2.steering, 0);
-			VESC_SetCurrent(&motor3.steering, 0);
+
+			MotorSend(&hcan2, 0x200, 0);
 		}
 		vTaskDelayUntil(&last_wake_time, pdMS_TO_TICKS(2));
 	}
@@ -339,13 +301,13 @@ void Remote_JY61(void *pvParameters)
   TickType_t last_wake_time = xTaskGetTickCount();
 	
    static float gyro_z_filter = 0;
-	
+	 
    for(;;)
 	{
-	 float gyro_z = JY61.AngularVelocity.Z;
-	
-   gyro_z_filter = 0.7f * gyro_z_filter + 0.3f * gyro_z;
-   gyro_z = gyro_z_filter;
+	  float gyro_z = JY61.AngularVelocity.Z;
+		
+    gyro_z_filter = lowpass_filter(gyro_z, &gyro_z_filter, 0.38f);
+    gyro_z = gyro_z_filter;
 		
 		if (fabs(gyro_z) < 0.3f)
 		{
@@ -365,7 +327,7 @@ void Remote_JY61(void *pvParameters)
 		}
 		//滤波
 		static float wz_f = 0;
-    wz_f = lowpass_filter(out, &wz_f, 0.4f);
+    wz_f = lowpass_filter(out, &wz_f, 0.7f);
 
 		Wz_correction = wz_f; // 转至Remote任务
 
@@ -379,9 +341,9 @@ void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
 	if (hcan->Instance == CAN2)
 	{
 	uint32_t ID = CAN_Receive_DataFrame(hcan, Recv);
-	VESC_ReceiveHandler(&motor1.steering, hcan, ID, Recv);
-	VESC_ReceiveHandler(&motor2.steering, hcan, ID, Recv);
-	VESC_ReceiveHandler(&motor3.steering, hcan, ID, Recv);
+	Motor3508Recv(&motor1.steering, hcan, ID, Recv);
+	Motor3508Recv(&motor2.steering, hcan, ID, Recv);
+	Motor3508Recv(&motor3.steering, hcan, ID, Recv);
 	}
 }
 
